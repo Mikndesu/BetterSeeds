@@ -1,5 +1,7 @@
 package com.github.mikn.better_seeds
 
+import com.github.mikn.better_seeds.init.BlockInit.Companion.BLOCKS
+import com.github.mikn.better_seeds.init.ItemInit.Companion.ITEMS
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
@@ -15,6 +17,8 @@ class BetterSeeds {
 
     init {
         val bus = FMLJavaModLoadingContext.get().modEventBus
-        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(this)
+        BLOCKS.register(bus)
+        ITEMS.register(bus)
     }
 }
