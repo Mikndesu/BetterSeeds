@@ -27,6 +27,7 @@ archivesBaseName = 'better_seeds'
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
     // Channel:   Version:
@@ -117,6 +118,23 @@ minecraft {
     }
 }
 
+configurations {
+    // Create the library configuration, where our non-mod libraries will be added to
+    library
+    // Any dependency in the library configuration will also be added to the implementation configuration
+    implementation.extendsFrom library
+}
+
+// Configure all runs with the following
+minecraft.runs.all {
+    lazyToken("minecraft_classpath") {
+        configurations.library.copyRecursive().resolve()
+                .collect { it.absolutePath }
+                .findAll { !it.contains("org.jetbrains\\annotations\\13.0") } // somewhat inelegantly remove duplicate
+                .join(File.pathSeparator)
+    }
+}
+
 mixin {
     add sourceSets.main, "better_seeds.refmap.json"
 
@@ -145,7 +163,7 @@ dependencies {
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-
+    library "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
@@ -161,6 +179,8 @@ dependencies {
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
+    dependsOn(classes)
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
     manifest {
         attributes([
                 "Specification-Title"     : "Better Seeds",
@@ -171,6 +191,12 @@ jar {
                 "Implementation-Vendor"   : "Mikn",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
+    }
+    configurations {
+        shaded.extendsFrom library
+    }
+    from {
+        configurations.shaded.collect() { it.isDirectory() ? it : zipTree(it) }
     }
 }
 
@@ -194,11 +220,11 @@ publishing {
 }
 compileKotlin {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 compileTestKotlin {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }

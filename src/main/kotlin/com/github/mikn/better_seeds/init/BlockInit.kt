@@ -1,7 +1,7 @@
 package com.github.mikn.better_seeds.init
 
 import com.github.mikn.better_seeds.BetterSeeds
-import net.minecraft.world.level.block.CropBlock
+import com.github.mikn.better_seeds.blocks.MagicCropBlock
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.material.Material
@@ -15,7 +15,7 @@ class BlockInit {
 
         @JvmStatic
         val MAGIC_WHEAT = BLOCKS.register("magic_wheat") {
-            CropBlock(
+            MagicCropBlock(
                 BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(
                     SoundType.CROP
                 )
