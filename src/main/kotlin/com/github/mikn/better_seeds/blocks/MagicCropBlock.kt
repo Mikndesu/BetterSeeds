@@ -12,10 +12,7 @@ import net.minecraft.world.item.Items
 import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
-import net.minecraft.world.level.block.Block
-import net.minecraft.world.level.block.Blocks
-import net.minecraft.world.level.block.BonemealableBlock
-import net.minecraft.world.level.block.BushBlock
+import net.minecraft.world.level.block.*
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
 import net.minecraft.world.level.block.state.properties.BlockStateProperties.AGE_7
@@ -26,7 +23,7 @@ import net.minecraftforge.common.IPlantable
 import net.minecraftforge.event.ForgeEventFactory
 import java.util.*
 
-class MagicCropBlock(property: Properties) : BushBlock(property), BonemealableBlock {
+class MagicCropBlock(property: Properties) : CropBlock(property) {
 
     private val MAX_AGE = 7
 
@@ -45,66 +42,30 @@ class MagicCropBlock(property: Properties) : BushBlock(property), BonemealableBl
             box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0),
             box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0)
         )
-        @JvmStatic
-        fun getGrowthSpeed(block: Block, getter: BlockGetter, blockPos: BlockPos) : Float {
-            var f = 1.0F
-            val blockPos = blockPos.below()
-            for(i in -1 .. 1) {
-                for(j in -1 .. 1) {
-                    var f1 = 0.0F
-                    val blockState = getter.getBlockState(blockPos.offset(i, 0, j))
-                    if(blockState.canSustainPlant(getter, blockPos.offset(i, 0, j), Direction.UP, block as IPlantable)) {
-                        var f1 = 1.0F
-                        if(blockState.isFertile(getter, blockPos.offset(i, 0, j))) {
-                            f1 = 3.0F
-                        }
-                    }
-                    if(i != 0 || j != 0) {
-                        f1 /= 4.0F
-                    }
-                    f += f1
-                }
-            }
-            val blockPos1: BlockPos = blockPos.north()
-            val blockPos2: BlockPos = blockPos.south()
-            val blockPos3: BlockPos = blockPos.west()
-            val blockPos4: BlockPos = blockPos.east()
-            val flag = getter.getBlockState(blockPos3).`is`(block) || getter.getBlockState(blockPos4).`is`(block)
-            val flag1 = getter.getBlockState(blockPos1).`is`(block) || getter.getBlockState(blockPos2).`is`(block)
-            if(flag && flag1) {
-                f /= 2.0F
-            } else {
-                val flag2 = getter.getBlockState(blockPos3.north()).`is`(block) || getter.getBlockState(blockPos4.north()).`is`(block) || getter.getBlockState(blockPos4.south()).`is`(block) || getter.getBlockState(blockPos3.south()).`is`(block)
-                if(flag2) {
-                    f /= 2.0F
-                }
-            }
-            return f
-        }
     }
 
     override fun getShape(blockState: BlockState, getter: BlockGetter, blockPos: BlockPos, context:CollisionContext) : VoxelShape {
-        return SHAPE_BY_AGE[blockState.getValue(this.getAgeProperty())]
+        return SHAPE_BY_AGE[blockState.getValue(this.ageProperty)]
     }
 
     override fun mayPlaceOn(blockState: BlockState, getter: BlockGetter, blockPos: BlockPos) : Boolean {
-        return blockState.`is`(Blocks.FARMLAND)
+        return super.mayPlaceOn(blockState, getter, blockPos)
     }
 
-    private fun getAgeProperty() : IntegerProperty {
+    override fun getAgeProperty() : IntegerProperty {
         return AGE_7
     }
 
-    private fun getAge(blockState: BlockState) : Int {
-        return blockState.getValue(this.getAgeProperty())
+    override fun getAge(blockState: BlockState) : Int {
+        return blockState.getValue(this.ageProperty)
     }
 
-    private fun getStateForAge(int:Int) : BlockState {
-        return this.defaultBlockState().setValue(this.getAgeProperty(), Integer.valueOf(int))
+    override fun getStateForAge(int:Int) : BlockState {
+        return this.defaultBlockState().setValue(this.ageProperty, Integer.valueOf(int))
     }
 
-    private fun isMaxAge(state: BlockState) : Boolean {
-        return state.getValue(getAgeProperty()) >= this.MAX_AGE
+    override fun isMaxAge(state: BlockState) : Boolean {
+        return state.getValue(ageProperty) >= this.MAX_AGE
     }
 
     override fun isRandomlyTicking(blockState: BlockState): Boolean {
@@ -125,7 +86,7 @@ class MagicCropBlock(property: Properties) : BushBlock(property), BonemealableBl
         }
     }
 
-    fun growCrops(level: Level, blockPos: BlockPos, blockState: BlockState) {
+    override fun growCrops(level: Level, blockPos: BlockPos, blockState: BlockState) {
         var i = this.getAge(blockState) + this.getBonemealAgeIncrease(level)
         val j = this.MAX_AGE
         if(i > j) {
@@ -134,7 +95,7 @@ class MagicCropBlock(property: Properties) : BushBlock(property), BonemealableBl
         level.setBlock(blockPos, this.getStateForAge(i), 2)
     }
 
-    private fun getBonemealAgeIncrease(level: Level) : Int {
+    override fun getBonemealAgeIncrease(level: Level) : Int {
         return Mth.nextInt(level.random, 2, 5)
     }
 
@@ -149,12 +110,12 @@ class MagicCropBlock(property: Properties) : BushBlock(property), BonemealableBl
         super.entityInside(blockState, level, blockPos, entity)
     }
 
-    private fun getBaseSeedId(): Item {
+    override fun getBaseSeedId(): Item {
         return Items.WHEAT_SEEDS
     }
 
     override fun getCloneItemStack(getter: BlockGetter, blockPos: BlockPos, blockState: BlockState) : ItemStack {
-        return ItemStack(this.getBaseSeedId())
+        return ItemStack(this.baseSeedId)
     }
 
     override fun isValidBonemealTarget(
