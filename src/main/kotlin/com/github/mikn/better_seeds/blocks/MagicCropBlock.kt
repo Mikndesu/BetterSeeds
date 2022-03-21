@@ -1,7 +1,6 @@
 package com.github.mikn.better_seeds.blocks
 
 import net.minecraft.core.BlockPos
-import net.minecraft.core.Direction
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.util.Mth
 import net.minecraft.world.entity.Entity
@@ -12,14 +11,15 @@ import net.minecraft.world.item.Items
 import net.minecraft.world.level.BlockGetter
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.LevelReader
-import net.minecraft.world.level.block.*
+import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.Blocks
+import net.minecraft.world.level.block.CropBlock
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
 import net.minecraft.world.level.block.state.properties.BlockStateProperties.AGE_7
 import net.minecraft.world.level.block.state.properties.IntegerProperty
 import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.VoxelShape
-import net.minecraftforge.common.IPlantable
 import net.minecraftforge.event.ForgeEventFactory
 import java.util.*
 
@@ -49,7 +49,7 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
     }
 
     override fun mayPlaceOn(blockState: BlockState, getter: BlockGetter, blockPos: BlockPos) : Boolean {
-        return super.mayPlaceOn(blockState, getter, blockPos)
+        return blockState.`is`(Blocks.END_STONE)
     }
 
     override fun getAgeProperty() : IntegerProperty {
@@ -99,8 +99,10 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
         return Mth.nextInt(level.random, 2, 5)
     }
 
-    override fun canSurvive(blockState: BlockState, levelReader: LevelReader, blockPos: BlockPos) : Boolean {
-        return (levelReader.getRawBrightness(blockPos, 0) >= 8 || levelReader.canSeeSky(blockPos)) && super.canSurvive(blockState, levelReader, blockPos)
+    override fun canSurvive(blockstate: BlockState?, worldIn: LevelReader, pos: BlockPos): Boolean {
+        val blockpos = pos.below()
+        val groundState = worldIn.getBlockState(blockpos)
+        return this.mayPlaceOn(groundState, worldIn, blockpos)
     }
 
     override fun entityInside(blockState: BlockState, level: Level, blockPos: BlockPos, entity: Entity) {

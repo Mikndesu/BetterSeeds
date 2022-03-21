@@ -11,13 +11,16 @@ class ItemInit {
     companion object {
         @JvmStatic
         val ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BetterSeeds.MOD_ID)
-
         @JvmStatic
-        val MAGIC_WHEAT = ITEMS.register("magic_wheat") {
+        val MAGIC_WHEAT_SEEDS = ITEMS.register("magic_wheat_seeds") {
             ItemNameBlockItem(
                 BlockInit.MAGIC_WHEAT.get(),
-                (Item.Properties()).tab(CreativeModeTab.TAB_MATERIALS)
+                (Item.Properties()).tab(CreativeModeTab.TAB_FOOD)
             )
+        }
+        @JvmStatic
+        val MAGIC_WHEAT = ITEMS.register("magic_wheat") {
+            Item(Item.Properties().tab(CreativeModeTab.TAB_MATERIALS))
         }
     }
 }
