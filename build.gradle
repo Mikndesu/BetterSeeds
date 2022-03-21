@@ -131,6 +131,7 @@ minecraft.runs.all {
         configurations.library.copyRecursive().resolve()
                 .collect { it.absolutePath }
                 .findAll { !it.contains("org.jetbrains\\annotations\\13.0") } // somewhat inelegantly remove duplicate
+                .findAll { !it.contains("org.jetbrains\\annotations\\23.0") }
                 .join(File.pathSeparator)
     }
 }
@@ -162,8 +163,10 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.0.18'
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    library "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
+    library("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version") {
+        exclude group: 'org.jetbrains', module: 'annotations'
+    }
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
@@ -196,7 +199,8 @@ jar {
         shaded.extendsFrom library
     }
     from {
-        configurations.shaded.collect() { it.isDirectory() ? it : zipTree(it) }
+        configurations.shaded.collect() {
+            it.isDirectory() ? it : zipTree(it) }
     }
 }
 
