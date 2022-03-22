@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key":
+  {
+    "S": { "item": "minecraft:wheat_seeds" }
+  },
+  "result": { "item": "better_seeds:magic_wheat_seeds" }
+}
