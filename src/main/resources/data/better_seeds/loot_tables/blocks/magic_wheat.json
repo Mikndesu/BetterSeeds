@@ -2,58 +2,67 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "better_seeds:magic_wheat_seeds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "better_seeds:magic_wheat",
-                  "properties": {
-                    "age": "3"
-                  }
-                }
-              ],
-              "count": {
-                "min": 2.0,
-                "max": 4.0,
-                "type": "minecraft:uniform"
-              }
-            },
-            {
               "function": "minecraft:apply_bonus",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "better_seeds:magic_wheat",
-                  "properties": {
-                    "age": "3"
-                  }
-                }
-              ],
               "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
+              "formula": "minecraft:binomial_with_bonus_count",
               "parameters": {
-                "bonusMultiplier": 1
+                "extra": 0,
+                "probability": 0.5714286
               }
             }
           ],
-          "name": "better_seeds:magic_wheat"
-        },
-        {
-          "type": "minecraft:item",
           "name": "better_seeds:magic_wheat_seeds"
         }
       ],
-      "functions": [
+      "conditions": [
         {
-          "function": "minecraft:explosion_decay"
+          "condition": "minecraft:block_state_property",
+          "block": "better_seeds:magic_wheat",
+          "properties": {
+            "age": "7"
+          }
         }
       ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
     }
   ]
 }
