@@ -16,7 +16,6 @@ import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.CropBlock
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
-import net.minecraft.world.level.block.state.properties.BlockStateProperties.AGE_7
 import net.minecraft.world.level.block.state.properties.IntegerProperty
 import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.VoxelShape
@@ -28,7 +27,8 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
     private val MAX_AGE = 7
 
     init {
-        registerDefaultState(stateDefinition.any().setValue(AGE_7, Integer.valueOf(0)))
+        registerDefaultState(stateDefinition.any().setValue(EFFECT_ID, Integer.valueOf(0)))
+        registerDefaultState(stateDefinition.any().setValue(AGE, Integer.valueOf(0)))
     }
 
     companion object {
@@ -42,6 +42,10 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
             box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0),
             box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0)
         )
+        @JvmStatic
+        val EFFECT_ID = IntegerProperty.create("effect_id", 0, 31)
+        @JvmStatic
+        val AGE = IntegerProperty.create("age", 0, 7)
     }
 
     override fun getShape(blockState: BlockState, getter: BlockGetter, blockPos: BlockPos, context:CollisionContext) : VoxelShape {
@@ -53,7 +57,7 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
     }
 
     override fun getAgeProperty() : IntegerProperty {
-        return AGE_7
+        return AGE
     }
 
     override fun getAge(blockState: BlockState) : Int {
@@ -143,6 +147,7 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
     }
 
     override fun createBlockStateDefinition(builder: StateDefinition.Builder<Block, BlockState>) {
-        builder.add(AGE_7)
+        builder.add(AGE)
+        builder.add(EFFECT_ID)
     }
 }
