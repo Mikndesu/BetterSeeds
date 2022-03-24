@@ -1,5 +1,6 @@
 package com.github.mikn.better_seeds.blocks
 
+import com.github.mikn.better_seeds.util.EffectEnum
 import net.minecraft.core.BlockPos
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.util.Mth
@@ -43,7 +44,7 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
             box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0)
         )
         @JvmStatic
-        val EFFECT_ID = IntegerProperty.create("effect_id", 0, 31)
+        val EFFECT_ID = IntegerProperty.create("effect_id", 0, 30)
         @JvmStatic
         val AGE = IntegerProperty.create("age", 0, 7)
     }
