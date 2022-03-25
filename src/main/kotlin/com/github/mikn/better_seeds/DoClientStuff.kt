@@ -1,6 +1,8 @@
 package com.github.mikn.better_seeds
 
+import MyChestScreen
 import com.github.mikn.better_seeds.init.BlockInit
+import net.minecraft.client.gui.screens.MenuScreens
 import net.minecraft.client.renderer.ItemBlockRenderTypes
 import net.minecraft.client.renderer.RenderType
 import net.minecraftforge.eventbus.api.SubscribeEvent
@@ -13,6 +15,7 @@ object DoClientStuff {
     fun clientSetup(evt: FMLClientSetupEvent) {
         evt.enqueueWork {
             ItemBlockRenderTypes.setRenderLayer(BlockInit.MAGIC_WHEAT.get(), RenderType.cutout())
+            MenuScreens.register(ContainerInit.EXAMPLE_CHEST.get(), ::MyChestScreen);
         }
     }
 }
