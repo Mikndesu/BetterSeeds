@@ -19,8 +19,8 @@ class BetterSeeds {
 
     init {
         val bus = FMLJavaModLoadingContext.get().modEventBus
-        CONTAINERS.register(bus)
-        BLOCK_ENTITIES.register(bus)
+//        CONTAINERS.register(bus)
+//        BLOCK_ENTITIES.register(bus)
         BLOCKS.register(bus)
         ITEMS.register(bus)
         MinecraftForge.EVENT_BUS.register(this)
