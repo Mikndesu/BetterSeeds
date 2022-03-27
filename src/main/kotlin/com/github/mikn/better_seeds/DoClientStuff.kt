@@ -1,5 +1,6 @@
 package com.github.mikn.better_seeds
 
+import com.github.mikn.better_seeds.client.screen.SeedModifierBlockScreen
 import com.github.mikn.better_seeds.init.BlockInit
 import com.github.mikn.better_seeds.init.ContainerInit
 import net.minecraft.client.gui.screens.MenuScreens
@@ -15,6 +16,7 @@ object DoClientStuff {
     fun clientSetup(evt: FMLClientSetupEvent) {
         evt.enqueueWork {
             ItemBlockRenderTypes.setRenderLayer(BlockInit.MAGIC_WHEAT.get(), RenderType.cutout())
+            MenuScreens.register(ContainerInit.SEED_MODIFIER_CONTAINER.get(), ::SeedModifierBlockScreen)
         }
     }
 }
