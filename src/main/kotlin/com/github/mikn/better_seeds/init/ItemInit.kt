@@ -2,6 +2,7 @@ package com.github.mikn.better_seeds.init
 
 import com.github.mikn.better_seeds.BetterSeeds
 import com.github.mikn.better_seeds.items.CustomItemNameBlockItem
+import com.github.mikn.better_seeds.items.MagicBread
 import com.github.mikn.better_seeds.items.MagicWheat
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.Item
@@ -22,6 +23,10 @@ class ItemInit {
         @JvmStatic
         val MAGIC_WHEAT = ITEMS.register("magic_wheat") {
             MagicWheat(Item.Properties().tab(CreativeModeTab.TAB_MATERIALS))
+        }
+        @JvmStatic
+        val MAGIC_BREAD = ITEMS.register("magic_bread") {
+            MagicBread(Item.Properties())
         }
     }
 }

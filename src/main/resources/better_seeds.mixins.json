@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "better_seeds.refmap.json",
   "mixins": [
+    "CraftingMenuMixin"
   ],
   "client": [
   ],
