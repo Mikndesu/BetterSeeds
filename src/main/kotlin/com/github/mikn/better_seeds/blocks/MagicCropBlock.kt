@@ -54,11 +54,19 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
     }
 
     override fun mayPlaceOn(blockState: BlockState, getter: BlockGetter, blockPos: BlockPos) : Boolean {
-        return blockState.`is`(Blocks.END_STONE)
+        return blockState.`is`(Blocks.FARMLAND)
     }
 
     override fun getAgeProperty() : IntegerProperty {
         return AGE
+    }
+
+    private fun getIDProperty(): IntegerProperty {
+        return EFFECT_ID
+    }
+
+    private fun getID(blockState: BlockState): Int {
+        return blockState.getValue(this.getIDProperty())
     }
 
     override fun getAge(blockState: BlockState) : Int {
@@ -84,7 +92,7 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
             if(i < this.MAX_AGE) {
                 val f:Float = getGrowthSpeed(this, serverLevel, blockPos)
                 if(net.minecraftforge.common.ForgeHooks.onCropsGrowPre(serverLevel, blockPos, blockState, random.nextInt((25.0F / f).toInt() + 1) == 0)) {
-                    serverLevel.setBlock(blockPos, this.getStateForAge(i+1), 2)
+                    serverLevel.setBlock(blockPos, this.getStateForAge(i+1).setValue(EFFECT_ID, this.getID(blockState)), 2)
                     net.minecraftforge.common.ForgeHooks.onCropsGrowPost(serverLevel, blockPos, blockState)
                 }
             }
@@ -97,7 +105,7 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
         if(i > j) {
             i = j
         }
-        level.setBlock(blockPos, this.getStateForAge(i), 2)
+        level.setBlock(blockPos, this.getStateForAge(i).setValue(EFFECT_ID, this.getID(blockState)), 2)
     }
 
     override fun getBonemealAgeIncrease(level: Level) : Int {
