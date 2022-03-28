@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items
 
 
 class SeedModifierBlockContainer : AbstractContainerMenu {
+    private val DECREASED_EXP = 6
     private val outputInventory = ResultContainer()
     private val inputInventory = object : SimpleContainer(1) {
         override fun setChanged() {
@@ -23,7 +24,8 @@ class SeedModifierBlockContainer : AbstractContainerMenu {
             this@SeedModifierBlockContainer.slotsChanged(this)
         }
     }
-    private var itemStackCountBeforeTake: Int = 0
+
+    private var itemStackCountBeforeTaken: Int = 0
     private var levelPosCallable: ContainerLevelAccess? = null
 
     constructor(
@@ -52,8 +54,9 @@ class SeedModifierBlockContainer : AbstractContainerMenu {
 
             override fun onTake(player: Player, itemStack: ItemStack) {
                 val itemStack = ItemStack(Items.WHEAT_SEEDS)
-                itemStack.count = itemStackCountBeforeTake - 1
+                itemStack.count = itemStackCountBeforeTaken - 1
                 this@SeedModifierBlockContainer.inputInventory.setItem(0, itemStack)
+                player.giveExperiencePoints(-DECREASED_EXP)
             }
         })
         for (i in 0..2) {
@@ -75,7 +78,7 @@ class SeedModifierBlockContainer : AbstractContainerMenu {
 
     private fun updateInventory() {
         val seed = this.inputInventory.getItem(0)
-        itemStackCountBeforeTake = seed.count
+        itemStackCountBeforeTaken = seed.count
         val ready = !seed.isEmpty
         if (!ready) {
             this.outputInventory.setItem(0, ItemStack.EMPTY)

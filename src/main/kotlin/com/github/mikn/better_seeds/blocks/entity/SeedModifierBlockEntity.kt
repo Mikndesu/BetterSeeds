@@ -13,12 +13,11 @@ class SeedModifierBlockEntity(blockPos: BlockPos?, blockState: BlockState?) : Bl
 
     private var customName: Component? = null
 
-    fun save(compoundTag: CompoundTag): CompoundTag {
+    override fun saveAdditional(compoundTag: CompoundTag) {
         super.saveAdditional(compoundTag)
         if (hasCustomName()) {
             compoundTag.putString("CustomName", Component.Serializer.toJson(this.customName))
         }
-        return compoundTag
     }
 
     override fun load(tag: CompoundTag) {
