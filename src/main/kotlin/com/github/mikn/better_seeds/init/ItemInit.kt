@@ -1,10 +1,9 @@
 package com.github.mikn.better_seeds.init
 
 import com.github.mikn.better_seeds.BetterSeeds
-import com.github.mikn.better_seeds.blocks.CustomItemNameBlockItem
+import com.github.mikn.better_seeds.items.CustomItemNameBlockItem
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.Item
-import net.minecraft.world.item.ItemNameBlockItem
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
 

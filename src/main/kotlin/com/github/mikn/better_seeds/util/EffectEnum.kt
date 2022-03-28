@@ -16,19 +16,25 @@ enum class EffectEnum(val id:Int){
     WATER_BREATHING(13),
     INVISIBILITY(14),
     BLINDNESS(15),
-    NIGHT_VISION(26),
+    NIGHT_VISION(16),
     HUNGER(17),
     WEAKNESS(18),
     POISON(19),
     WITHER(20),
     HEALTH_BOOST(21),
     ABSORPTION(22),
-    SATURATION(24),
+    SATURATION(23),
     GLOWING(24),
     LEVITATION(25),
     LUCK(26),
     UNLUCK(27),
     SLOW_FALLING(28),
     CONDUIT_POWER(29),
-    DOLPHINS_GRACE(30)
+    DOLPHINS_GRACE(30);
+
+    companion object {
+        fun getEffectById(id: Int): EffectEnum? {
+            return values().find { it.id == id }
+        }
+    }
 }

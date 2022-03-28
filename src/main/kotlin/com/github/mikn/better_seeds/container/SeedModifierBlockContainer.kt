@@ -1,8 +1,10 @@
 package com.github.mikn.better_seeds.container
 
+import com.github.mikn.better_seeds.BetterSeeds
 import com.github.mikn.better_seeds.init.BlockInit
 import com.github.mikn.better_seeds.init.ContainerInit
 import com.github.mikn.better_seeds.init.ItemInit
+import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.Container
 import net.minecraft.world.SimpleContainer
 import net.minecraft.world.entity.player.Inventory
@@ -13,6 +15,7 @@ import net.minecraft.world.inventory.ResultContainer
 import net.minecraft.world.inventory.Slot
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Items
+import java.util.*
 
 
 class SeedModifierBlockContainer : AbstractContainerMenu {
@@ -84,7 +87,11 @@ class SeedModifierBlockContainer : AbstractContainerMenu {
             this.outputInventory.setItem(0, ItemStack.EMPTY)
         } else {
             val itemStack = ItemStack(ItemInit.MAGIC_WHEAT_SEEDS.get())
+            val tag = CompoundTag()
+            tag.putInt("id", Random().nextInt(30)+1)
+            itemStack.tag = tag
             this.outputInventory.setItem(0, itemStack)
+            BetterSeeds.LOGGER.error(itemStack.tag!!.getInt("id"))
         }
         this.broadcastChanges()
     }
