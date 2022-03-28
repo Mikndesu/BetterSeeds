@@ -15,15 +15,1172 @@
                   "condition": "minecraft:block_state_property",
                   "block": "better_seeds:magic_wheat",
                   "properties": {
-                    "age": "7"
+                    "age": "7",
+                    "effect_id": "1"
                   }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:1}"
                 }
               ],
               "name": "better_seeds:magic_wheat"
             },
             {
               "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "2"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:2}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "3"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:3}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "4"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:4}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "5"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:5}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "6"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:6}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "7"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:7}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "8"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:8}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "9"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:9}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "10"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:10}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "11"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:11}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "12"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:12}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "13"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:13}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "14"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:14}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "15"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:15}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "16"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:16}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "17"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:17}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "18"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:18}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "19"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:19}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "20"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:20}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "21"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:21}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "22"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:22}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "23"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:23}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "24"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:24}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "25"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:25}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "26"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:26}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "27"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:27}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "28"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:28}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "29"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:29}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "age": "7",
+                    "effect_id": "30"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:30}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "1"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:1}"
+                }
+              ],
               "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "2"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:2}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "3"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:3}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "4"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:4}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "5"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:5}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "6"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:6}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "7"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:7}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "8"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:8}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "9"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:9}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "10"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:10}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "11"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:11}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "12"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:12}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "13"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:13}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "14"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:14}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "15"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:15}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "16"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:16}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "17"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:17}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "18"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:18}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "19"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:19}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "20"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:20}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "21"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:21}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "22"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:22}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "23"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:23}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "24"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:24}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "25"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:25}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "26"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:26}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "27"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:27}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "28"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:28}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "29"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:29}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "better_seeds:magic_wheat",
+                  "properties": {
+                    "effect_id": "30"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{effect_id:30}"
+                }
+              ],
+              "name": "better_seeds:magic_wheat_seeds"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:wheat_seeds"
             }
           ]
         }
@@ -35,27 +1192,577 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "conditions": [
             {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "parameters": {
-                "extra": 0,
-                "probability": 0.5714286
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "1"
               }
             }
           ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:1}"
+            }
+          ],
           "name": "better_seeds:magic_wheat_seeds"
-        }
-      ],
-      "conditions": [
+        },
         {
-          "condition": "minecraft:block_state_property",
-          "block": "better_seeds:magic_wheat",
-          "properties": {
-            "age": "7"
-          }
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "2"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:2}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "3"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:3}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "4"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:4}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "5"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:5}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "6"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:6}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "7"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:7}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "8"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:8}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "9"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:9}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "10"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:10}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "11"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:11}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "12"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:12}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "13"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:13}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "14"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:14}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "15"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:15}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "16"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:16}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "17"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:17}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "18"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:18}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "19"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:19}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "20"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:20}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "21"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:21}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "22"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:22}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "23"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:23}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "24"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:24}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "25"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:25}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "26"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:26}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "27"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:27}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "28"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:28}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "29"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:29}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "better_seeds:magic_wheat",
+              "properties": {
+                "effect_id": "30"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{effect_id:30}"
+            }
+          ],
+          "name": "better_seeds:magic_wheat_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wheat_seeds"
         }
       ]
     }

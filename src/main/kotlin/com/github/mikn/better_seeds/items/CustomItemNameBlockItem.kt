@@ -29,19 +29,21 @@ class CustomItemNameBlockItem(block: Block, properties: Properties) : ItemNameBl
     ) {
         val tag = this.getShareTag(itemStack)
         if(tag != null) {
-            val id = tag.getInt("id")
+            val id = tag.getInt("effect_id")
             list.add(TextComponent(EffectEnum.getEffectById(id).toString()))
         }
     }
 
     override fun useOn(context: UseOnContext): InteractionResult {
         val result = super.useOn(context)
-        val tag = this.getShareTag(context.itemInHand)
-        var id = 0
-        if(tag != null) {
-            id = tag.getInt("id")
+        if(result == InteractionResult.CONSUME || result == InteractionResult.CONSUME_PARTIAL) {
+            val tag = this.getShareTag(context.itemInHand)
+            var id = 0
+            if(tag != null) {
+                id = tag.getInt("effect_id")
+            }
+            context.level.setBlock(context.clickedPos.above(), context.level.getBlockState(context.clickedPos.above()).setValue(MagicCropBlock.EFFECT_ID, id), 1)
         }
-        context.level.setBlock(context.clickedPos.above(), context.level.getBlockState(context.clickedPos.above()).setValue(MagicCropBlock.EFFECT_ID, id), 1)
         return result
     }
 }

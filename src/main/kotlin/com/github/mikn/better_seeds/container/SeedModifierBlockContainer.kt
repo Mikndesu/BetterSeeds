@@ -88,10 +88,10 @@ class SeedModifierBlockContainer : AbstractContainerMenu {
         } else {
             val itemStack = ItemStack(ItemInit.MAGIC_WHEAT_SEEDS.get())
             val tag = CompoundTag()
-            tag.putInt("id", Random().nextInt(30)+1)
+            tag.putInt("effect_id", Random().nextInt(30)+1)
             itemStack.tag = tag
             this.outputInventory.setItem(0, itemStack)
-            BetterSeeds.LOGGER.error(itemStack.tag!!.getInt("id"))
+            BetterSeeds.LOGGER.error(itemStack.tag!!.getInt("effect_id"))
         }
         this.broadcastChanges()
     }
