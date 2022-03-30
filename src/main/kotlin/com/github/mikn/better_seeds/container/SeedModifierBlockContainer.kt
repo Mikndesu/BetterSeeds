@@ -4,6 +4,8 @@ import com.github.mikn.better_seeds.BetterSeeds
 import com.github.mikn.better_seeds.init.BlockInit
 import com.github.mikn.better_seeds.init.ContainerInit
 import com.github.mikn.better_seeds.init.ItemInit
+import com.github.mikn.better_seeds.util.EffectEnum
+import com.github.mikn.better_seeds.util.EffectIDManager
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.Container
 import net.minecraft.world.SimpleContainer
@@ -87,11 +89,9 @@ class SeedModifierBlockContainer : AbstractContainerMenu {
             this.outputInventory.setItem(0, ItemStack.EMPTY)
         } else {
             val itemStack = ItemStack(ItemInit.MAGIC_WHEAT_SEEDS.get())
-            val tag = CompoundTag()
-            tag.putInt("effect_id", Random().nextInt(30)+1)
-            itemStack.tag = tag
+            val manager = EffectIDManager(itemStack)
+            manager.setEffect(EffectEnum.values().random().id, 1)
             this.outputInventory.setItem(0, itemStack)
-            BetterSeeds.LOGGER.error(itemStack.tag!!.getInt("effect_id"))
         }
         this.broadcastChanges()
     }

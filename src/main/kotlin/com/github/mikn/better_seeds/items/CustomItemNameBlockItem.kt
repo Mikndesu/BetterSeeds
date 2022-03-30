@@ -4,6 +4,9 @@ import com.github.mikn.better_seeds.BetterSeeds
 import com.github.mikn.better_seeds.blocks.MagicCropBlock
 import com.github.mikn.better_seeds.init.BlockInit
 import com.github.mikn.better_seeds.util.EffectEnum
+import com.github.mikn.better_seeds.util.EffectIDManager
+import com.github.mikn.better_seeds.util.LevelEnum
+import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.TextComponent
 import net.minecraft.world.InteractionResult
@@ -27,22 +30,21 @@ class CustomItemNameBlockItem(block: Block, properties: Properties) : ItemNameBl
         list: MutableList<Component>,
         tooltipFlag: TooltipFlag
     ) {
-        val tag = this.getShareTag(itemStack)
-        if(tag != null) {
+        val manager = EffectIDManager(itemStack)
+        manager.listTag.forEach {
+            val tag = it as CompoundTag
             val id = tag.getInt("effect_id")
-            list.add(TextComponent(EffectEnum.getEffectById(id).toString()))
+            val level = tag.getInt("effect_level")
+            list.add(TextComponent("${EffectEnum.getEffectById(id)} ${LevelEnum.getLevelEnumByNumber(level)}"))
         }
     }
 
     override fun useOn(context: UseOnContext): InteractionResult {
         val result = super.useOn(context)
         if(result == InteractionResult.CONSUME || result == InteractionResult.CONSUME_PARTIAL) {
-            val tag = this.getShareTag(context.itemInHand)
-            var id = 0
-            if(tag != null) {
-                id = tag.getInt("effect_id")
-            }
-            context.level.setBlock(context.clickedPos.above(), context.level.getBlockState(context.clickedPos.above()).setValue(MagicCropBlock.EFFECT_ID, id), 1)
+            val manager = EffectIDManager(context.itemInHand)
+            val tag = manager.listTag.getCompound(0)
+            context.level.setBlock(context.clickedPos.above(), context.level.getBlockState(context.clickedPos.above()).setValue(MagicCropBlock.EFFECT_ID, tag.getInt("effect_id")).setValue(MagicCropBlock.EFFECT_LEVEL, tag.getInt("effect_level")), 1)
         }
         return result
     }

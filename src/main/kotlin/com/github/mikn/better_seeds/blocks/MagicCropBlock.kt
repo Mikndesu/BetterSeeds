@@ -1,6 +1,9 @@
 package com.github.mikn.better_seeds.blocks
 
+import com.github.mikn.better_seeds.BetterSeeds
+import com.github.mikn.better_seeds.init.ItemInit
 import com.github.mikn.better_seeds.util.EffectEnum
+import com.github.mikn.better_seeds.util.EffectIDManager
 import net.minecraft.core.BlockPos
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.util.Mth
@@ -18,6 +21,7 @@ import net.minecraft.world.level.block.CropBlock
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
 import net.minecraft.world.level.block.state.properties.IntegerProperty
+import net.minecraft.world.level.storage.loot.LootContext
 import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.VoxelShape
 import net.minecraftforge.event.ForgeEventFactory
@@ -46,7 +50,18 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
         @JvmStatic
         val EFFECT_ID = IntegerProperty.create("effect_id", 0, 30)
         @JvmStatic
+        val EFFECT_LEVEL = IntegerProperty.create("effect_level", 1, 100)
+        @JvmStatic
         val AGE = IntegerProperty.create("age", 0, 7)
+    }
+
+    override fun getDrops(blockState: BlockState, p_60538_: LootContext.Builder): MutableList<ItemStack> {
+        val list = super.getDrops(blockState, p_60538_)
+        list.forEach {
+            val manager = EffectIDManager(it)
+            manager.setEffect(blockState.getValue(this.getIDProperty()), blockState.getValue(this.getLevelProperty()))
+        }
+        return list
     }
 
     override fun getShape(blockState: BlockState, getter: BlockGetter, blockPos: BlockPos, context:CollisionContext) : VoxelShape {
@@ -67,6 +82,14 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
 
     private fun getID(blockState: BlockState): Int {
         return blockState.getValue(this.getIDProperty())
+    }
+
+    private fun getLevelProperty(): IntegerProperty {
+        return EFFECT_LEVEL
+    }
+
+    private fun getLevel(blockState: BlockState): Int {
+        return blockState.getValue(this.getLevelProperty())
     }
 
     override fun getAge(blockState: BlockState) : Int {
@@ -92,7 +115,8 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
             if(i < this.MAX_AGE) {
                 val f:Float = getGrowthSpeed(this, serverLevel, blockPos)
                 if(net.minecraftforge.common.ForgeHooks.onCropsGrowPre(serverLevel, blockPos, blockState, random.nextInt((25.0F / f).toInt() + 1) == 0)) {
-                    serverLevel.setBlock(blockPos, this.getStateForAge(i+1).setValue(EFFECT_ID, this.getID(blockState)), 2)
+                    serverLevel.setBlock(blockPos, this.getStateForAge(i+1).setValue(EFFECT_ID, this.getID(blockState)).setValue(
+                        EFFECT_LEVEL, this.getLevel(blockState)), 2)
                     net.minecraftforge.common.ForgeHooks.onCropsGrowPost(serverLevel, blockPos, blockState)
                 }
             }
@@ -105,7 +129,8 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
         if(i > j) {
             i = j
         }
-        level.setBlock(blockPos, this.getStateForAge(i).setValue(EFFECT_ID, this.getID(blockState)), 2)
+        level.setBlock(blockPos, this.getStateForAge(i).setValue(EFFECT_ID, this.getID(blockState)).setValue(
+            EFFECT_LEVEL, this.getLevel(blockState)), 2)
     }
 
     override fun getBonemealAgeIncrease(level: Level) : Int {
@@ -158,5 +183,6 @@ class MagicCropBlock(property: Properties) : CropBlock(property) {
     override fun createBlockStateDefinition(builder: StateDefinition.Builder<Block, BlockState>) {
         builder.add(AGE)
         builder.add(EFFECT_ID)
+        builder.add(EFFECT_LEVEL)
     }
 }
