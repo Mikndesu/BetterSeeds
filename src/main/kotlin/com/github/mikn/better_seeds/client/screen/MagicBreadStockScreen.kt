@@ -1,7 +1,7 @@
 package com.github.mikn.better_seeds.client.screen
 
 import com.github.mikn.better_seeds.BetterSeeds
-import com.github.mikn.better_seeds.container.SeedModifierBlockContainer
+import com.github.mikn.better_seeds.container.MagicBreadBlockContainer
 import com.mojang.blaze3d.systems.RenderSystem
 import com.mojang.blaze3d.vertex.PoseStack
 import net.minecraft.client.Minecraft
@@ -10,12 +10,11 @@ import net.minecraft.client.renderer.GameRenderer
 import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.entity.player.Inventory
-import net.minecraftforge.client.event.ScreenEvent.BackgroundDrawnEvent
+import net.minecraftforge.client.event.ScreenEvent
 import net.minecraftforge.common.MinecraftForge
 
-
-class SeedModifierBlockScreen(screenContainer: SeedModifierBlockContainer?, inv: Inventory?, title: Component?) :
-    AbstractContainerScreen<SeedModifierBlockContainer?>(screenContainer, inv, title) {
+class MagicBreadStockScreen(screenContainer: MagicBreadBlockContainer?, inv: Inventory?, title: Component?) :
+    AbstractContainerScreen<MagicBreadBlockContainer?>(screenContainer, inv, title) {
     override fun render(matrixStack: PoseStack, mouseX: Int, mouseY: Int, partialTicks: Float) {
         this.renderBackground(matrixStack)
         super.render(matrixStack, mouseX, mouseY, partialTicks)
@@ -29,7 +28,7 @@ class SeedModifierBlockScreen(screenContainer: SeedModifierBlockContainer?, inv:
     override fun renderBackground(matrixStack: PoseStack, vOffset: Int) {
         if (minecraft!!.level != null) {
             this.fillGradient(matrixStack, 0, 0, width, height, -1072689136, -804253680)
-            MinecraftForge.EVENT_BUS.post(BackgroundDrawnEvent(this, matrixStack))
+            MinecraftForge.EVENT_BUS.post(ScreenEvent.BackgroundDrawnEvent(this, matrixStack))
         } else {
             renderDirtBackground(vOffset)
         }
@@ -42,7 +41,6 @@ class SeedModifierBlockScreen(screenContainer: SeedModifierBlockContainer?, inv:
     }
 
     override fun renderLabels(matrixStack: PoseStack, mouseX: Int, mouseY: Int) {
-        drawString(matrixStack, Minecraft.getInstance().font, "Seed Modifier", 10, 10, 0xffffff)
     }
 
     override fun renderBg(matrixStack: PoseStack, partialTicks: Float, x: Int, y: Int) {
@@ -56,6 +54,6 @@ class SeedModifierBlockScreen(screenContainer: SeedModifierBlockContainer?, inv:
 
     companion object {
         @JvmStatic
-        private val GUI = ResourceLocation(BetterSeeds.MOD_ID, "textures/gui/seed_modifier.png")
+        private val GUI = ResourceLocation("textures/gui/container/shulker_box.png")
     }
 }

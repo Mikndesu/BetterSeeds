@@ -43,6 +43,7 @@ public class CraftingMenuMixin {
                     ItemStack itemStack1 = p_150550_.getItem(3);
                     ItemStack itemStack2 = p_150550_.getItem(4);
                     ItemStack itemStack3 = p_150550_.getItem(5);
+                    // >>>>>>> Modded Process
                     if(ItemInit.getMAGIC_WHEAT().get().equals(p_150550_.getItem(3).getItem())) {
                         var map = deserializer(itemStack3, deserializer(itemStack2, deserializer(itemStack1, new HashMap<>())));
                         var listTag = new ListTag();
@@ -54,6 +55,7 @@ public class CraftingMenuMixin {
                         });
                         itemstack.addTagElement("Effects", listTag);
                     }
+                    // >>>>>>>
                 }
             }
             p_150551_.setItem(0, itemstack);

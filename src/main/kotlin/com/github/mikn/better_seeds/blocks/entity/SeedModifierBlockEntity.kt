@@ -9,7 +9,7 @@ import net.minecraft.world.Nameable
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.state.BlockState
 
-class SeedModifierBlockEntity(blockPos: BlockPos?, blockState: BlockState?) : BlockEntity(BlockEntityInit.SEED_MODIFIER_BLOCK.get(), blockPos, blockState), Nameable {
+class SeedModifierBlockEntity(blockPos: BlockPos?, blockState: BlockState?) : BlockEntity(BlockEntityInit.SEED_MODIFIER_BLOCK_ENTITY.get(), blockPos, blockState), Nameable {
 
     private var customName: Component? = null
 

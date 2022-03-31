@@ -1,6 +1,7 @@
 package com.github.mikn.better_seeds.init
 
 import com.github.mikn.better_seeds.BetterSeeds
+import com.github.mikn.better_seeds.container.MagicBreadBlockContainer
 import com.github.mikn.better_seeds.container.SeedModifierBlockContainer
 import net.minecraftforge.common.extensions.IForgeMenuType
 import net.minecraftforge.registries.DeferredRegister
@@ -13,6 +14,10 @@ class ContainerInit {
         @JvmStatic
         val SEED_MODIFIER_CONTAINER = CONTAINERS.register("seed_modifier") {
             IForgeMenuType.create { windowId, inv, _ -> SeedModifierBlockContainer(windowId, inv) }
+        }
+        @JvmStatic
+        val MAGIC_BREAD_STOCK_CONTAINER = CONTAINERS.register("magic_bread_stock") {
+            IForgeMenuType.create { windowId, inv, _ -> MagicBreadBlockContainer(windowId, inv) }
         }
     }
 }

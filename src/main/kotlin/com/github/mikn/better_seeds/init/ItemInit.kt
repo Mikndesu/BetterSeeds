@@ -4,6 +4,7 @@ import com.github.mikn.better_seeds.BetterSeeds
 import com.github.mikn.better_seeds.items.CustomItemNameBlockItem
 import com.github.mikn.better_seeds.items.MagicBread
 import com.github.mikn.better_seeds.items.MagicWheat
+import net.minecraft.world.item.BlockItem
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.Item
 import net.minecraftforge.registries.DeferredRegister
@@ -19,6 +20,10 @@ class ItemInit {
                 BlockInit.MAGIC_WHEAT.get(),
                 (Item.Properties()).tab(CreativeModeTab.TAB_FOOD)
             )
+        }
+        @JvmStatic
+        val MAGIC_BREAD_STOCK = ITEMS.register("magic_bread_stock") {
+            BlockItem(BlockInit.MAGIC_BREAD_STOCK.get(), (Item.Properties()).tab(CreativeModeTab.TAB_FOOD))
         }
         @JvmStatic
         val MAGIC_WHEAT = ITEMS.register("magic_wheat") {

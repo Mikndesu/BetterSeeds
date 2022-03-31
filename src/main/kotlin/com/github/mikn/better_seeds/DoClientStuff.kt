@@ -1,5 +1,6 @@
 package com.github.mikn.better_seeds
 
+import com.github.mikn.better_seeds.client.screen.MagicBreadStockScreen
 import com.github.mikn.better_seeds.client.screen.SeedModifierBlockScreen
 import com.github.mikn.better_seeds.init.BlockInit
 import com.github.mikn.better_seeds.init.ContainerInit
@@ -17,6 +18,7 @@ object DoClientStuff {
         evt.enqueueWork {
             ItemBlockRenderTypes.setRenderLayer(BlockInit.MAGIC_WHEAT.get(), RenderType.cutout())
             MenuScreens.register(ContainerInit.SEED_MODIFIER_CONTAINER.get(), ::SeedModifierBlockScreen)
+            MenuScreens.register(ContainerInit.MAGIC_BREAD_STOCK_CONTAINER.get(), ::MagicBreadStockScreen)
         }
     }
 }
