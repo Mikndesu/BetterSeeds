@@ -1,0 +1,25 @@
+{   "parent": "block/block",
+    "textures": {
+        "particle": "better_seeds:block/stock_side",
+        "body_north": "better_seeds:block/stock_side",
+        "body_south": "better_seeds:block/stock_side",
+        "body_east": "better_seeds:block/stock_side_2",
+        "body_west": "better_seeds:block/stock_side_2",
+        "body_top": "better_seeds:block/stock_top",
+        "body_bottom": "better_seeds:block/stock_bottom"
+    },
+    "elements": [
+        {   "__comment": "",
+            "from": [ 4, 0, 0 ],
+            "to": [ 11, 16, 16 ],
+            "faces": {
+                "down":{"texture": "#body_bottom"},
+                "up":{"texture": "#body_top"},
+                "north":{"texture": "#body_north" },
+                "south":{"texture": "#body_south" },
+                "west":{"texture": "#body_west"},
+                "east":{"texture": "#body_east"}
+            }
+        }
+    ]
+}
