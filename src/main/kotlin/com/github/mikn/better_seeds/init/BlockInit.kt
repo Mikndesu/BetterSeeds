@@ -28,7 +28,7 @@ class BlockInit {
         }
         @JvmStatic
         val MAGIC_BREAD_STOCK = BLOCKS.register("magic_bread_stock") {
-            MagicBreadStockBlock(BlockBehaviour.Properties.of(Material.WOOD))
+            MagicBreadStockBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion())
         }
     }
 }
